@@ -105,10 +105,22 @@ Satyam's Mac directly, same as task 9 did.
 
 ## Session log
 
-### 2026-10-09 · Satyam handoff sync
-- Imported the latest committed snapshot from Satyam's repository at `d91a0ac6a56dcfeda9cecc00d209b967a4b35666`, including hosting configuration, production UI fixes, and socket routing updates.
-- Preserved this handoff's existing history and the Satyam demo assets under `docs/demo/satyam/`. The new sync commit uses Satyam Govind Rao's configured Git identity.
-- Verified the imported tracked files against the source snapshot; local secrets, dependencies, and generated working files are excluded from the ZIP.
+### 2026-10-09 · Latest Satyam handoff refresh
+- Imported the committed source snapshot `80c32d23db95f456547a2357c65f58897e2efe20`, including the landing-page redesign, UI assets, deployment configuration, and revised female-narrated demo.
+- Replaced the older personalized demo files with the current shared demo and retained the handoff's Git history. The new sync commit uses the configured Satyam identity and records the source revision.
+- Verified all imported tracked files against the source snapshot, apart from this handoff log. ZIP integrity was checked; local secrets and dependencies are excluded.
+
+### 2026-10-09 · Product demo revised with female narration
+- Rebuilt the 1080p demo around a payment problem, a PayOps AI reveal, and a complete case with linked evidence and before/after verification. Added a manager-approved refund, audit trail, architecture explanation, and chapter markers. The new cut runs about 3:24.
+- Generated female neural narration with deliberate cadence. Removed personal credits from the script, voice, title cards, captions, transcript and poster. Fresh UI recordings present seeded account names as role labels while preserving business facts and outcomes.
+- Updated the MP4, separate narration, SRT, transcript, storyboard, voice preview and README links. Speech caching now accounts for voice, delivery instructions and changed text. Recording scripts use one fresh isolated REPLAY database and capture the full workflow.
+- Verification: payment and refund both reached RESOLVED; payment independent checks passed; the refund continued after manager approval. Checked visible screen text and demo copy for personal names, subtitle ordering, media decoding, audio headroom and script syntax. Temporary recording services were closed after capture. The revised video is a local asset; the older hosted upload must be replaced separately.
+
+
+### 2026-10-09 · Landing page redesign (D081)
+- New plain-English landing page: hero with a real state matrix, the problem, five steps, self-hosted demo video (`preload="none"`), trust statements, fresh screenshots, architecture, "Try it". No name or source link on the page.
+- Removed `links.ts` and the old `case-screen.jpg` (README now points at `case.jpg`). Landing test rewritten. Web tests 197 passed, typecheck and lint clean, no horizontal overflow at 1440, 820 and 390 px.
+- Fixed a mobile overflow: the matrix's hidden screen-reader labels escaped the scroll container; the container is now `relative`.
 
 ### 2026-10-09 · Hosted demo deployed (D080)
 - Live on Vercel (web), Render (API, REPLAY mode) and Supabase (Postgres). Checked through the Vercel URL: health, demo sign-in, 20 open cases, one investigation ran to RESOLVED with a validated audit trail, and the Overview loads in a browser.
