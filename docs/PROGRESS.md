@@ -105,6 +105,13 @@ Satyam's Mac directly, same as task 9 did.
 
 ## Session log
 
+### 2026-10-10 · Satyam archive identity cleanup
+- Rebuilt all 56 existing commits with Satyam Govind Rao <satyamgrao007@gmail.com> as author and committer, preserving commit order, parents and dates. Removed assistant credit and session trailers.
+- Normalized owner names and contact details throughout historical text, renamed the session guide to CONTRIBUTING.md, and replaced the previous account's repository links with YOUR-GITHUB-USERNAME placeholders. Historical demo media now uses the current credit-free assets.
+- Included a fresh self-contained Git repository configured for Satyam, with no remote, environment secrets, dependencies or original-history backups.
+- Validation: archive integrity, all Git objects and commit identities, historical content and path scans, commit topology and date preservation, and current application-file comparison.
+
+
 ### 2026-10-09 · Latest Satyam handoff refresh
 - Imported the committed source snapshot `80c32d23db95f456547a2357c65f58897e2efe20`, including the landing-page redesign, UI assets, deployment configuration, and revised female-narrated demo.
 - Replaced the older personalized demo files with the current shared demo and retained the handoff's Git history. The new sync commit uses the configured Satyam identity and records the source revision.

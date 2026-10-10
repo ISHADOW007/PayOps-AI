@@ -24,7 +24,7 @@ describe('LandingRoute', () => {
     expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy');
     // No name and no source-code link on the page (D081).
     expect(screen.queryByRole('link', { name: /source code/i })).not.toBeInTheDocument();
-    expect(container.textContent).not.toMatch(/Satyam|Satyam|github/i);
+    expect(container.textContent).not.toMatch(/Satyam|github/i);
   });
 });
 
